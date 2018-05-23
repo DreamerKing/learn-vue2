@@ -1,0 +1,18 @@
+{
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": false
+		}
+	},
+	"rules": {
+		"no-extra-semi": "error",
+		"eol-last": ["error", "always"],
+		"vuefix/vuefix": [ 2, { "auto": true }]
+	},
+    "plugins": [
+    	"vuefix",
+    	"html"
+    ]
+}
