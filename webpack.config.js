@@ -38,9 +38,18 @@ module.exports = {
 		new VueLoaderPlugin()
 	],
 	devServer: {
-		contentBase: path.resolve(__dirname,"dist"),
+		contentBase: path.resolve(__dirname,"dist"), // 静态文件目录
+		historyApiFallback: true, // History路由模式404处理
 		port: 8800,
 		open: true,
+		allowedHosts: [
+			".dk.com",
+			"dk.com",
+			"king.com"
+		],
+		bonjour: true,
+		clientLogLevel: "none",
+		compress: false, //是否启用压缩
 		proxy: {
 			"/api/": {
 				target: "http://localhost:3500",
